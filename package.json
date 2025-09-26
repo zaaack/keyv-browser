@@ -14,7 +14,7 @@
     "test:browser": "tsc && vitest "
   },
   "files": [
-    "lib"
+    "es"
   ],
   "repository": {
     "type": "git",
