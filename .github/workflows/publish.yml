@@ -1,0 +1,27 @@
+## NOTE: cannot pass in CI, but works locally
+# name: publish
+# on:
+#   push:
+#     branches: [ master ]
+#     paths-ignore:
+#       - 'README.md'
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#       - name: Install pnpm
+#         uses: pnpm/action-setup@v4
+#       - uses: actions/setup-node@v4
+#         with:
+#           node-version: 20
+#           cache: 'pnpm'
+#       - name: install
+#         run: pnpm i
+#       # - name: Install Playwright deps
+#       #   run: npx playwright install --with-deps
+#       - name: Install Playwright Browsers
+#         run: npx playwright install chromium
+#       - name: test
+#         run: pnpm test
