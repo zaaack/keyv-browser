@@ -1,6 +1,6 @@
 {
   "name": "keyv-browser",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Browser storage adapter for Keyv.",
   "main": "es/index.js",
   "typings": "es/index",
