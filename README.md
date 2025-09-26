@@ -1,13 +1,12 @@
 # keyv-browser [<img width="100" align="right" src="https://rawgit.com/lukechilds/keyv/master/media/logo.svg" alt="keyv">](https://github.com/lukechilds/keyv)
 
-> File storage adapter for Keyv, using json to serialize data fast and small.
+> Browser storage adapter for Keyv, support localStorage and indexedDB.
 
 <!-- [![publish](https://github.com/zaaack/keyv-browser/actions/workflows/publish.yml/badge.svg)](https://github.com/zaaack/keyv-browser/actions/workflows/publish.yml) -->
 [![npm](https://img.shields.io/npm/v/keyv-browser.svg)](https://www.npmjs.com/package/keyv-browser)
 
-File storage adapter for [Keyv](https://github.com/lukechilds/keyv).
+Browser storage adapter for [Keyv](https://github.com/lukechilds/keyv).
 
-TTL functionality is handled internally by interval scan, don't need to panic about expired data take too much space.
 
 ## Install
 
