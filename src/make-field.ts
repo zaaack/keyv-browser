@@ -3,7 +3,7 @@ import type KeyvLocalStorage from "./keyv-localStorage"
 import type KeyvIndexedDB from "./keyv-idb"
 
 export class Field<T, D extends T | void = T | void> {
-  constructor(protected kv: KeyvLocalStorage | KeyvIndexedDB | Keyv, protected key: string, protected defaults: D) {}
+  constructor(protected kv: KeyvLocalStorage | KeyvIndexedDB | Keyv | Map<string, any>, protected key: string, protected defaults: D) {}
 
   get(): Promise<D>
   get(def: D): Promise<D>
@@ -14,7 +14,9 @@ export class Field<T, D extends T | void = T | void> {
   getSync(): D
   getSync(def: D): D
   getSync(def = this.defaults) {
-    if ('getSync' in this.kv) {
+    if (this.kv instanceof Map) {
+      return this.kv.get(this.key) ?? def
+    } else if ('getSync' in this.kv) {
       return this.kv.getSync<D>(this.key) ?? def
     }
     throw new Error('kv does not support getSync')
