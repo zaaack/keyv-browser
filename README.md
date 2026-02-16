@@ -16,6 +16,13 @@ npm install --save keyv keyv-browser
 
 ## Usage
 
+### Using with AI agent
+
+```sh
+npx skills add https://github.com/zaaack/prompts --skill keyv-browser
+
+```
+
 ### Using with keyv
 ```ts
 import Keyv from 'keyv'
